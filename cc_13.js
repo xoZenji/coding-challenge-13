@@ -28,3 +28,16 @@ function createEmployeeCard(name, position) {
 createEmployeeCard('Peter Parker', 'Webslinger');
 createEmployeeCard('Eddy Brock', 'Venom');
 createEmployeeCard('Wade Wilson', 'Merc with a Mouth');
+
+// Task 3: Bulk Update on Employee Cards
+const employeeCardSelector = document.querySelectorAll(".employee-card"); // selects all the employee cards
+const employeeArray = Array.from(employeeCardSelector); // converts the nodelist to an array
+ 
+ // changes the background color of each card to red
+ employeeArray.forEach((card) => { 
+    card.style.backgroundColor = 'Orange';
+    card.style.display = 'inline-block';
+    card.style.margin = '10px';
+    card.style.padding = '5px';
+    card.style.borderRadius = '5px';
+ }); // made the cards look better by added some space between them and changing the background color.
