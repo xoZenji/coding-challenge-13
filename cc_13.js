@@ -13,6 +13,12 @@ function createEmployeeCard(name, position) {
     const removeButton = document.createElement('button');
     removeButton.textContent = 'Remove';
 
+    // Task 4: Employee Card Removal with Event Bubbling (Lines 17-20)
+    removeButton.addEventListener('click', function(click) {
+        click.stopPropagation();
+        employeeContainer.removeChild(card);
+    });
+
     card.appendChild(heading);
     card.appendChild(paragraph);
     card.appendChild(removeButton);
@@ -41,3 +47,9 @@ const employeeArray = Array.from(employeeCardSelector); // converts the nodelist
     card.style.padding = '5px';
     card.style.borderRadius = '5px';
  }); // made the cards look better by added some space between them and changing the background color.
+
+ // Task 4: Employee Card Removal with Event Bubbling (Lines 52-55)
+ const employeeContainer = document.getElementById('employeeContainer');
+ employeeContainer.addEventListener('click', function() {
+    console.log("Employee Card Clicked");
+ });
