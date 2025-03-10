@@ -28,7 +28,7 @@ function createEmployeeCard(name, position) {
     removeButton.addEventListener('click', () => {
         card.remove();
     });
-};
+}; // created a function that creates an employee card with a name, position, and a remove button.
 
 // Employee List
 createEmployeeCard('Peter Parker', 'Webslinger');
@@ -39,7 +39,7 @@ createEmployeeCard('Wade Wilson', 'Merc with a Mouth');
 const employeeCardSelector = document.querySelectorAll(".employee-card"); // selects all the employee cards
 const employeeArray = Array.from(employeeCardSelector); // converts the nodelist to an array
  
- // changes the background color of each card to red
+ // changes the background color of each card to Orange
  employeeArray.forEach((card) => { 
     card.style.backgroundColor = 'Orange';
     card.style.display = 'inline-block';
@@ -52,4 +52,4 @@ const employeeArray = Array.from(employeeCardSelector); // converts the nodelist
  const employeeContainer = document.getElementById('employeeContainer');
  employeeContainer.addEventListener('click', function() {
     console.log("Employee Card Clicked");
- });
+ }); // added a click event listener to the employee container.
